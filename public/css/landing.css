@@ -1,0 +1,248 @@
+/* Awecean landing */
+
+.landing {
+  position: relative;
+  min-height: 100svh;
+  height: 100svh;
+  overflow: hidden;
+  color: white;
+  isolation: isolate;
+}
+
+.landing__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: url("/assets/covers/cover-clean.jpg");
+  background-size: cover;
+  background-position: 12% center;
+  filter: saturate(0.95);
+}
+
+.landing__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(12, 16, 22, 0.26) 0%, rgba(12, 16, 22, 0.28) 36%, rgba(12, 16, 22, 0.78) 100%),
+    linear-gradient(90deg, rgba(12, 16, 22, 0.28), transparent 62%);
+}
+
+.landing__top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: 26px 30px;
+}
+
+.landing .brand {
+  gap: 10px;
+}
+
+.landing .brand-mark {
+  width: 66px;
+  height: 67px;
+  padding: 0;
+  border: 0;
+  border-radius: 18px;
+  background: transparent;
+  box-shadow: 0 7px 22px rgba(0, 0, 0, 0.18);
+  overflow: visible;
+}
+
+.landing .brand-mark::before,
+.landing .brand-mark::after {
+  display: none;
+}
+
+.landing .brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 17px;
+}
+
+.landing .brand-cn {
+  color: white;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.2);
+}
+
+.landing__main {
+  position: relative;
+  z-index: 2;
+  isolation: isolate;
+  height: calc(100% - 94px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 24px 72px;
+}
+
+.landing__main::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 20% -8% 9%;
+  background: radial-gradient(ellipse at 50% 46%, rgba(8, 12, 18, 0.3), transparent 68%);
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+.landing__status {
+  color: rgba(255, 255, 255, 0.82);
+  font-family: var(--rounded);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.14em;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+}
+
+.landing__quote-box {
+  max-width: 620px;
+  margin: 18px 0 0;
+  cursor: pointer;
+}
+
+.landing__quote {
+  margin: 0;
+  color: white;
+  font-family: var(--serif);
+  font-size: clamp(32px, 8.2vw, 42px);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-wrap: balance;
+  text-shadow: 0 2px 22px rgba(0, 0, 0, 0.4), 0 0 2px rgba(0, 0, 0, 0.24);
+}
+
+.landing__quote-source {
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.66);
+  font-family: var(--rounded);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
+}
+
+.landing__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 44px;
+  margin-top: 30px;
+  padding: 0 24px;
+  border-radius: 999px;
+  background: white;
+  color: var(--ink);
+  font-family: var(--rounded);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+  transition: transform 0.2s var(--ease), background 0.2s var(--ease);
+}
+
+.landing__button:hover {
+  transform: translateY(-2px);
+  background: var(--pink-soft);
+}
+
+@media (min-width: 861px) {
+  .landing {
+    background: #fffaf7;
+    color: var(--ink);
+  }
+
+  .landing__bg {
+    inset: 0 0 0 auto;
+    width: 46%;
+    background-color: #536f7d;
+    background-image: url("/assets/covers/cover-clean.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: saturate(0.94);
+  }
+
+  .landing__scrim {
+    background:
+      linear-gradient(90deg, #fffaf7 0%, #fffaf7 50%, rgba(255, 250, 247, 0.97) 55%, rgba(255, 250, 247, 0.2) 66%, transparent 78%),
+      linear-gradient(180deg, rgba(255, 250, 247, 0.1), transparent 60%);
+  }
+
+  .landing__top {
+    padding: 30px 42px;
+  }
+
+  .landing .brand-mark {
+    box-shadow: 0 7px 22px rgba(23, 58, 77, 0.14);
+  }
+
+  .landing .brand-cn {
+    color: var(--ink);
+    text-shadow: none;
+  }
+
+  .landing__main {
+    height: calc(100% - 102px);
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    width: min(620px, 50%);
+    padding: 0 4vw 56px 6.2vw;
+  }
+
+  .landing__main::before {
+    display: none;
+  }
+
+  .landing__status {
+    color: var(--ink-3);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-shadow: none;
+  }
+
+  .landing__quote-box {
+    margin-top: 22px;
+  }
+
+  .landing__quote {
+    color: var(--ink);
+    font-size: clamp(44px, 5vw, 60px);
+    line-height: 1.45;
+    text-shadow: none;
+  }
+
+  .landing__quote-source {
+    color: var(--muted);
+    font-size: 11px;
+    text-shadow: none;
+  }
+
+  .landing__button {
+    background: var(--ink);
+    color: white;
+    box-shadow: 0 10px 28px rgba(51, 46, 59, 0.16);
+  }
+
+  .landing__button:hover {
+    background: var(--pink-deep);
+  }
+}
+
+@media (max-width: 380px) {
+  .landing__quote {
+    font-size: 29px;
+  }
+
+  .landing__main {
+    padding-bottom: 56px;
+  }
+}

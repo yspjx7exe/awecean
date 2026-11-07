@@ -1,0 +1,22 @@
+{
+  "name": "awecean",
+  "version": "1.3.0",
+  "private": true,
+  "description": "Awecean —— 发现你敬畏的人、事、物。",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "cf:dev": "wrangler dev",
+    "cf:deploy": "wrangler deploy",
+    "cf:db:local": "wrangler d1 execute awecean --local --file=./schema.sql",
+    "cf:db:remote": "wrangler d1 execute awecean --remote --file=./schema.sql"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "wrangler": "^4.0.0"
+  }
+}

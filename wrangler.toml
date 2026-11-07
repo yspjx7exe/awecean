@@ -1,0 +1,26 @@
+name = "awecean"
+main = "worker.mjs"
+compatibility_date = "2026-01-01"
+workers_dev = true
+
+# Static frontend. The worker only runs for /api/*; everything else is served
+# directly by Cloudflare's asset layer (with SPA fallback for client routes).
+[assets]
+directory = "./public"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+run_worker_first = ["/api/*"]
+
+# Run:
+#   npx wrangler d1 create awecean
+# then replace the id below with the one printed by the command.
+[[d1_databases]]
+binding = "DB"
+database_name = "awecean"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+# Run:
+#   npx wrangler r2 bucket create awecean-uploads
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "awecean-uploads"

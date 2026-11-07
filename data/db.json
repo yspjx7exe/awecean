@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "version": 1,
+    "createdAt": "2026-11-07T10:23:02.646Z",
+    "seededAt": "2026-11-07T10:23:02.772Z"
+  },
+  "users": [
+    {
+      "id": "u_719c7da363a625c83a",
+      "username": "根号12",
+      "usernameLower": "根号12",
+      "passwordSalt": "10f51377e24ae5fb197234e26f15d681",
+      "passwordHash": "86290671044e4b3236ec8b3882391cbf3b14d2bf220149ea1cfc40fce732f22b33dbce7e8e3c880dccee1d4261c12e0a66acd4b4c5dcfca7a0c3d10be43056ba",
+      "email": "root12@awecean.site",
+      "signature": "",
+      "avatar": null,
+      "role": "owner",
+      "level": 1,
+      "totalRespects": 0,
+      "rootPoints": 60,
+      "createdAt": "2026-11-07T01:00:00.000Z",
+      "invitedBy": null,
+      "registrationCode": null,
+      "following": [],
+      "followers": [],
+      "publicRecords": true,
+      "bannedUntil": null,
+      "banReason": ""
+    }
+  ],
+  "objects": [],
+  "respects": [],
+  "sessions": [
+    {
+      "id": "472e644c3b71b7b6670e37bba18e2ac733123600ac426e735c8f32fd",
+      "userId": "u_719c7da363a625c83a",
+      "createdAt": "2026-11-07T10:54:35.057Z",
+      "expiresAt": "2026-12-07T10:54:35.057Z"
+    },
+    {
+      "id": "85cd0d6dd08fafd1ab6444d7eac7eec594ea797585d6b29a4f49a49e",
+      "userId": "u_719c7da363a625c83a",
+      "createdAt": "2026-11-07T10:57:10.848Z",
+      "expiresAt": "2026-12-07T10:57:10.848Z"
+    }
+  ],
+  "invites": [
+    {
+      "id": "i_3d508a66fb638ed3c3",
+      "code": "AW-2026",
+      "createdBy": "u_719c7da363a625c83a",
+      "createdAt": "2026-11-07T10:23:02.772Z",
+      "expiresAt": "2026-11-09T10:23:02.772Z",
+      "usedBy": null,
+      "usedAt": null
+    }
+  ],
+  "reports": []
+}
